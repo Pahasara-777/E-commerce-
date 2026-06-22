@@ -7,5 +7,258 @@
 </head>
 <body>
     
+<html>
+<style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.cart, .account {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.filters {
+  width: 200px;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.filter-options button {
+  margin: 2px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background: none;
+  cursor: pointer;
+}
+
+.products {
+  flex: 1;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.search-bar {
+  margin: 1rem 0;
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.category-buttons {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.category-buttons button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: white;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.product-type {
+  font-size: 0.85rem;
+  color: #777;
+  margin: 0.5rem 0 0;
+}
+
+.price {
+  color: #000;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+</style>
+<head>
+  <title>Products Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="menu">☰</div>
+      <ul class="nav-links">
+        <li>Home</li>
+        <li>Category</li>
+        <li>New</li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart">Cart</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <aside class="filters">
+      <h3>Filters</h3>
+      <div>
+        <h4>Category</h4>
+        <div class="filter-options">
+          <button>📱</button><br><button>🔋</button><br><button>🎧</button><br>
+          <button>⛓️‍💥</button><br><button>⌚</button><br><button>💻</button>
+        </div>
+      </div>
+      <div>
+        <h4>Availability</h4>
+        <label><input type="checkbox"> Availability (450)</label><br>
+        <label><input type="checkbox"> Out Of Stock (18)</label>
+      </div>
+    </aside>
+
+    <section class="products">
+      <div class="breadcrumb">Home / Products</div>
+      <h1>Products</h1>
+
+
+      <div class="category-buttons">
+        <button>📱 Mobile & Tablets</button>
+        <button>🔋 Mobile Accessories</button>
+        <button>🎧 Audio Tech</button>
+        <button>⛓️‍💥 Power & Cables</button>
+        <button>⌚ Wearable tech</button>
+        <button>💻 Coumputer & Laptop</button>
+        <button>🎮 Gaming</button>
+        <button>🏠 Smart Home</button>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://cyberdeals.lk/wp-content/uploads/2026/04/samsung-galaxy-s26-ultra-black.jpg" alt="Product 1" />
+          <p class="product-type">Samsung</p>
+          <h3>Samsung Galaxy S26 Ultra 16GB RAM 1TB</h3>
+          <p class="price">LKR 755,554.00</p>
+        </div>
+        <div class="product-card">
+          <img src="https://cyberdeals.lk/wp-content/uploads/2026/06/orion-dune-7.jpg" alt="Product 2" />
+          <p class="product-type">Headphone</p>
+          <h3>ORION 7 Dune Bluetooth Headphone</h3>
+          <p class="price">LKR 18,878.00</p>
+        </div>
+        <div class="product-card">
+          <img src="https://cyberdeals.lk/wp-content/uploads/2025/04/Jertech-Nasus-W200-.jpg" alt="Product 3" />
+          <p class="product-type">Mouse</p>
+          <h3>Rechargeable Gaming Wireless Mouse</h3>
+          <p class="price">LKR 4,833.00</p>
+        </div>
+        <div class="product-card">
+            <img src="https://cyberdeals.lk/wp-content/uploads/2025/04/Jertech-Cheetah-KM960.jpg" alt="Product 3" />
+            <p class="product-type">Keyboard</p>
+            <h3>KM960 Wired Gaming Keyboard</h3>
+            <p class="price">LKR 5,833.00</p>
+        </div>
+        <div class="product-card">
+            <img src="https://cyberdeals.lk/wp-content/uploads/2024/09/Apple-Watch-SE-Nike-44MM-Silver-Aluminum-GPS-Pure-PlatinumBlack-Nike-Sport-Band.jpg" alt="Product 3" />
+            <p class="product-type">Apple Watch</p>
+            <h3>Apple Watch SE Nike 44MM Silver</h3>
+            <p class="price">LKR 113,667.00</p>
+        </div>
+        <div class="product-card">
+            <img src="https://cyberdeals.lk/wp-content/uploads/2024/09/2-120-3.jpg" alt="Product 3" />
+            <p class="product-type">Laptop</p>
+            <h3>Asus TUF i7 12th Gen Gaming Laptop</h3>
+            <p class="price">LKR 455,556.00</p>
+        </div>
+       <div class="product-card">
+            <img src="https://cyberdeals.lk/wp-content/uploads/2026/02/antec-ax1000-argb-lite.jpg" alt="Product 3" />
+            <p class="product-type">Tower Case</p>
+            <h3>ANTEC Performance 1 FT ARGB Full Tower Case</h3>
+            <p class="price">LKR 38,889.00</p>
+        </div>
+         <div class="product-card">
+            <img src="https://cyberdeals.lk/wp-content/uploads/2025/06/JBL-CHARGE-5-Portable-Waterproof-Bluetooth-Speaker-3.jpg" alt="Product 3" />
+            <p class="product-type">Speaker</p>
+            <h3>JBL CHARGE 5 Bluetooth Speaker</h3>
+            <p class="price">LKR 45,000.00</p>
+        </div>
+         <div class="product-card">
+            <img src="https://cyberdeals.lk/wp-content/uploads/2025/02/12.png" alt="Product 3" />
+            <p class="product-type">Memory Card</p>
+            <h3>MemoryGhost 128GB MicroSD Memory Card</h3>
+            <p class="price">LKR 4,389.00</p>
+      </div>
+       <div class="product-card">
+            <img src="https://cyberdeals.lk/wp-content/uploads/2025/03/SanDisk-Ultra-Dual-Drive-Go-512GB-400MBs-USB-3.2-Gen-1-Type-C-Pen-Drive.jpg" alt="Product 3" />
+            <p class="product-type">Pen Drive</p>
+            <h3>SanDisk Ultra 512GB Type-C Pen Drive</h3>
+            <p class="price">LKR 19,889.00</p>
+      </div>
+    </div>
+    </section>
+  </main>
+</body>
+</html>
+   
 </body>
 </html>
